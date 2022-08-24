@@ -13,6 +13,16 @@ import org.springframework.stereotype.Service;
 
 @Service("signService")
 public class SignServiceImpl implements SignService {
+
+    /**
+     * 扫描形参课程的活动列表
+     * 有签到活动就签
+     * --尚未实现拍照签到
+     * @param course 扫描的课程
+     * @param student 包含最新cookie
+     * @param location 位置签到要用
+     * @return ture：签到成功/false：签到失败或者无签到活动
+     */
     @Override
     public boolean sign(Course course, Student student, Location location) {
         boolean result = false;
@@ -45,12 +55,11 @@ public class SignServiceImpl implements SignService {
                                     + "&general=1&sys=1&ls=1&appType=15&&tid=&uid=" + student.getUid()
                                     + "&ut=s"
                     ).execute();
-                    String signbody = null;
                     switch (nameOne) {
                         case "签到":
                         case "签到码签到":
-                        case "手势签到":
-                            signbody = HttpRequest.get(
+                        case "手势签到": {
+                            String signbody = HttpRequest.get(
                                     "https://mobilelearn.chaoxing.com/pptSign/stuSignajax"
                                             + "?activeId=" + aid
                                             + "&uid=" + student.getUid()
@@ -61,9 +70,10 @@ public class SignServiceImpl implements SignService {
                             System.out.println(nameOne + signbody);
                             result = true;
                             break;
-                        case "位置签到":
+                        }
+                        case "位置签到":{
                             if (null != location.getAddress()) {
-                                signbody = HttpRequest.get(
+                                String signbody = HttpRequest.get(
                                         "https://mobilelearn.chaoxing.com/pptSign/stuSignajax"
                                                 + "?name=" + student.getName()
                                                 + "&address=" + location.getAddress()
@@ -78,9 +88,10 @@ public class SignServiceImpl implements SignService {
                                 result = true;
                             }
                             break;
-                        case "二维码签到":
+                        }
+                        case "二维码签到":{
                             if (null != student.getEnc()) {
-                                signbody = HttpRequest.get(
+                                String signbody = HttpRequest.get(
                                         "https://mobilelearn.chaoxing.com/pptSign/stuSignajax"
                                                 + "?enc=" + student.getEnc()
                                                 + "&name=" + student.getName()
@@ -93,9 +104,11 @@ public class SignServiceImpl implements SignService {
                                 result = true;
                             }
                             break;
-                        default:
+                        }
+                        default: {
                             System.out.println("发现未支持的签到活动");
                             break; // 退出switch
+                        }
                     }
                     break; // 退出activeList遍历
                 }
