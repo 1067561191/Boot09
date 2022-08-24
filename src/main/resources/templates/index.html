@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="author" content="cming">
+    <meta name="email" content="cming0420@gmail.com">
+    <meta name="keywords" content="大学狗,学习通,签到,学习通签到,学习通自动签到">
+    <meta name="description" content="帮助您自动完成学习通的各种签到而不需要您亲自动手或者到指定定位完成签到任务。">
+    <title>主页</title>
+</head>
+<body>
+<div style="width:200px;height:300px;margin: 20px auto">
+    <form action="/sign" method="get">
+        <table>
+            <tr>
+                <td>account</td>
+                <td><input name="account" type="tel" autofocus required></td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td><input name="password" type="password" required></td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td><input name="name" type="text" required></td>
+            </tr>
+            <tr>
+                <td>enc</td>
+                <td><input name="enc" type="text"></td>
+            </tr>
+            <tr>
+                <td>address</td>
+                <td><input name="address" type="text"></td>
+            </tr>
+            <tr>
+                <td>lng</td>
+                <td><input name="lng" type="text"></td>
+            </tr>
+            <tr>
+                <td>lat</td>
+                <td><input name="lat" type="text"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="reset">重置</button>
+                </td>
+                <td>
+                    <button type="submit">提交</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

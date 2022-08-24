@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration status="WARN"><!-- status="debug" 打开框架的调试模式 --><!-- monitorInterval="x" 自动加载配置文件的间隔时间不低于x秒 -->
+    <Properties>
+        <Property name="FILENAME">Dxg</Property>
+        <Property name="FILEPATH">logs</Property>
+        <property name="log.sql.level">debug</property>
+    </Properties>
+    <Appenders>
+        <!-- 控制台Appender -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY" />
+            <PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss} [%thread] %c %m%n"/>
+        </Console>
+
+        <!-- 异步文件输出 -->
+        <RollingRandomAccessFile name="RollingRandomAccessFile" fileName="${FILEPATH}/${FILENAME}.log" immediateFlush="false"
+                          filePattern="${FILEPATH}/$${date:yyyy-MM}/${FILENAME}-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout charset="UTF-8" pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss} [%thread] %c %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingRandomAccessFile>
+
+    </Appenders>
+
+
+    <Loggers>
+        <Root level="info" includeLocation="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="RollingRandomAccessFile"/>
+        </Root>
+        <!--
+        includeLocation="false" 表示去除日志记录中的行号和方法名信息 非常影响日志记录的效率（生产中都不用）
+         additivity="false" 表示不继承父Logger
+         -->
+        <Logger level="${log.sql.level}" name="edu.cming.dao" includeLocation="false" additivity="false">
+            <AppenderRef ref="Console"/>
+<!--            <AppenderRef ref="RollingRandomAccessFile"/>-->
+        </Logger>
+
+
+    </Loggers>
+</Configuration>

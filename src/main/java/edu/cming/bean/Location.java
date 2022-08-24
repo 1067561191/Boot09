@@ -3,14 +3,17 @@ package edu.cming.bean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component(value = "location")
+import javax.validation.constraints.NotNull;
+
+
 public class Location {
 
-    @Value("${location.address}")
+
+    @NotNull
     private String address;
-    @Value("${location.lng}")
+    @NotNull
     private String lng;
-    @Value("${location.lat}")
+    @NotNull
     private String lat;
 
     public Location() {

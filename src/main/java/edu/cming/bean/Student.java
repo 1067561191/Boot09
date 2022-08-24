@@ -1,25 +1,20 @@
 package edu.cming.bean;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-
 import javax.validation.constraints.NotNull;
 
-@Component(value = "student")
 public class Student {
 
-    @Value("${student.account}")
+
     @NotNull
     private String account;
-    @Value("${student.password}")
+
     @NotNull
     private String password;
 
-    @Value("${student.name}")
+
     @NotNull
     private String name;
 
-    @Value("${student.enc}")
     private String enc;
 
     private String despassword;
@@ -48,6 +43,14 @@ public class Student {
         this.uf = uf;
         this.d = d;
         this.vc3 = vc3;
+    }
+
+    public Student(String account, String password, String name, String enc, String despassword) {
+        this.account = account;
+        this.password = password;
+        this.name = name;
+        this.enc = enc;
+        this.despassword = despassword;
     }
 
     public String getDespassword() {
