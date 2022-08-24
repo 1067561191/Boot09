@@ -59,7 +59,6 @@
     </dependencies>
 
     <build>
-        <finalName>XxtSign</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
