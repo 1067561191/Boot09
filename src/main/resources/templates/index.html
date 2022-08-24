@@ -15,32 +15,32 @@
     <form action="/sign" method="get">
         <table>
             <tr>
-                <td>account</td>
-                <td><input name="account" type="tel" autofocus required></td>
+                <td>account*</td>
+                <td><input name="account" type="tel" placeholder="你的号码" autofocus required></td>
             </tr>
             <tr>
-                <td>password</td>
-                <td><input name="password" type="password" required></td>
+                <td>password*</td>
+                <td><input name="password" type="password" placeholder="你的密码" required></td>
             </tr>
             <tr>
-                <td>name</td>
-                <td><input name="name" type="text" required></td>
+                <td>name*</td>
+                <td><input name="name" type="text" placeholder="签到显示的名字 显示在教师端(装逼必备)" required></td>
             </tr>
             <tr>
                 <td>enc</td>
-                <td><input name="enc" type="text"></td>
+                <td><input name="enc" type="text" placeholder="二维码签到需要填写(VX扫一扫二维码即可获得)"></td>
             </tr>
             <tr>
                 <td>address</td>
-                <td><input name="address" type="text"></td>
+                <td><input name="address" type="text" placeholder="位置签到需要填写 显示在教师端(装逼必备)"></td>
             </tr>
             <tr>
                 <td>lng</td>
-                <td><input name="lng" type="text"></td>
+                <td><input name="lng" type="text" placeholder="经度"></td>
             </tr>
             <tr>
                 <td>lat</td>
-                <td><input name="lat" type="text"></td>
+                <td><input name="lat" type="text" placeholder="纬度"></td>
             </tr>
             <tr>
                 <td>
@@ -52,6 +52,7 @@
             </tr>
         </table>
     </form>
+    <a href="https://api.map.baidu.com/lbsapi/getpoint/index.html" target="_blank">这里获取经纬度-百度拾取坐标系统</a>
 </div>
 </body>
 </html>
