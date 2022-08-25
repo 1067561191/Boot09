@@ -6,7 +6,7 @@
 ## 环境
 JDK11+
 ## 让我们开始吧!
-命令行：`mvn package`  
+下载jar包[点此下载](https://github.com/1067561191/Boot09/releases/)  
 完成打包后`cd`到Boot09.jar所在目录  
 命令行：`java -jar Boot09.jar`   
 浏览器[打开这里](http://localhost:8080/)  
