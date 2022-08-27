@@ -9,13 +9,13 @@
         <!-- 控制台Appender -->
         <Console name="Console" target="SYSTEM_OUT">
             <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY" />
-            <PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss} [%thread] %c %m%n"/>
+            <PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss} [%thread] %c%n%m%n"/>
         </Console>
 
         <!-- 异步文件输出 -->
         <RollingRandomAccessFile name="RollingRandomAccessFile" fileName="${FILEPATH}/${FILENAME}.log" immediateFlush="false"
                           filePattern="${FILEPATH}/$${date:yyyy-MM}/${FILENAME}-%d{yyyy-MM-dd}-%i.log">
-            <PatternLayout charset="UTF-8" pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss} [%thread] %c %m%n"/>
+            <PatternLayout charset="UTF-8" pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss} [%thread] %c%n%m%n"/>
             <Policies>
                 <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
                 <SizeBasedTriggeringPolicy size="10 MB"/>

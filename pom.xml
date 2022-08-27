@@ -10,7 +10,7 @@
     </parent>
     <groupId>edu.cming</groupId>
     <artifactId>Boot09</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2</version>
     <name>Boot09</name>
     <description>Boot09</description>
     <properties>
@@ -59,7 +59,17 @@
         </dependency>
         <dependency>
             <groupId>cn.hutool</groupId>
-            <artifactId>hutool-all</artifactId>
+            <artifactId>hutool-crypto</artifactId>
+            <version>5.8.5</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-http</artifactId>
+            <version>5.8.5</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-json</artifactId>
             <version>5.8.5</version>
         </dependency>
         <dependency>

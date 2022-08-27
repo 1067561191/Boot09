@@ -87,7 +87,10 @@
     <orderEntry type="library" name="Maven: org.attoparser:attoparser:2.0.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.unbescape:unbescape:1.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.4.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: cn.hutool:hutool-all:5.8.5" level="project" />
+    <orderEntry type="library" name="Maven: cn.hutool:hutool-crypto:5.8.5" level="project" />
+    <orderEntry type="library" name="Maven: cn.hutool:hutool-core:5.8.5" level="project" />
+    <orderEntry type="library" name="Maven: cn.hutool:hutool-http:5.8.5" level="project" />
+    <orderEntry type="library" name="Maven: cn.hutool:hutool-json:5.8.5" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15to18:1.71" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.15.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-configuration-processor:2.7.3" level="project" />
