@@ -1,3 +1,6 @@
+# package path
+/target/
+
 # Compiled class file
 *.class
 
