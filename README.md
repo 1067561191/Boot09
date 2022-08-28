@@ -10,8 +10,9 @@ JDK11+
 `cd`到项目根目录  
 命令行：`mvn package`即可打包到同目录下target目录下  
 一般打包好的名称为*Boot09-{版本号}.jar*  
-如果不想打包可以使用本项目的[releases](https://github.com/1067561191/Boot09/releases)版本直接执行  
-但[releases](https://github.com/1067561191/Boot09/releases)往往不会及时打包上传
+### 1.直接下载可执行jar包
+如果不想打包可以使用本项目的[Gitee-releases](https://gitee.com/electricc/Boot09/releases)或者[GitHub-releases](https://github.com/1067561191/Boot09/releases)版本直接执行  
+但[Gitee-releases](https://gitee.com/electricc/Boot09/releases)或者[GitHub-releases](https://github.com/1067561191/Boot09/releases)往往不会及时打包上传
 ### 2.执行
 命令行：`cd ./target/`  
 命令行：`java -jar Boot09-{版本号}.jar`   
