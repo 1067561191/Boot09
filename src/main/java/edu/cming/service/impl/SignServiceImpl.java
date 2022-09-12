@@ -20,7 +20,7 @@ public class SignServiceImpl implements SignService {
 
     private final Logger log = LoggerFactory.getLogger(getClass());
 
-    @Async
+    @Async("applicationTaskExecutor")
     @Override
     public void active(ArrayList<Course> courses, Student student, Location location) {
         int sleepSeconds = 55;

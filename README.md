@@ -36,11 +36,11 @@ JDK11+
    > OpenJDK Runtime Environment (build 17-internal+0-adhoc..src)  
    > OpenJDK 64-Bit Server VM (build 17-internal+0-adhoc..src, mixed mode)  
 4. 下载本项目releases包并查看  
-`curl -LJO https://github.com/1067561191/Boot09/releases/download/v0.0.2/Boot09-0.0.2.jar && ls `  
+`curl -LJO https://github.com/1067561191/Boot09/releases/download/v0.0.3/Boot09-0.0.3.jar && ls `  
    4.1 查看界面下方是否有如下内容  
-   > Boot09-0.0.2.jar
+   > Boot09-0.0.3.jar
 5. 执行并检查  
-`java -jar ./Boot09-0.0.2.jar`  
+`java -jar ./Boot09-0.0.3.jar`  
    5.1 查看界面最下方提示为：  
    > Started Boot09Application in x.xxx seconds (JVM running for x.xxx)  
 6. 将termux-app放至后台，打开浏览器访问：[http://127.0.0.1:8080/](http://127.0.0.1:8080/)  

@@ -10,9 +10,9 @@
     </parent>
     <groupId>edu.cming</groupId>
     <artifactId>Boot09</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <name>Boot09</name>
-    <description>Boot09</description>
+    <description>独享版学习通签到</description>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -40,48 +40,41 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- log4j日志实现 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
+        <!-- log4j异步实现 -->
         <dependency>
             <groupId>com.lmax</groupId>
             <artifactId>disruptor</artifactId>
             <version>3.4.4</version>
         </dependency>
+        <!-- 轻量级服务器以替代tomcat -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jetty</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
+        <!-- 工具类包 -->
         <dependency>
             <groupId>cn.hutool</groupId>
-            <artifactId>hutool-crypto</artifactId>
-            <version>5.8.5</version>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.6</version>
         </dependency>
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-http</artifactId>
-            <version>5.8.5</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-json</artifactId>
-            <version>5.8.5</version>
-        </dependency>
+        <!-- crypto拓展包以支持des_padding:PKCS7Padding -->
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk15to18</artifactId>
             <version>1.71</version>
         </dependency>
+        <!-- json解析 -->
         <dependency>
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
-            <version>1.15.2</version>
+            <version>1.15.3</version>
         </dependency>
+        <!-- springboot配置文件解析器 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
@@ -92,6 +85,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- 数据校验 -->
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
